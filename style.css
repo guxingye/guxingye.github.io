@@ -14,165 +14,150 @@ body {
 /* 顶部导航 */
 nav{
     width:100%;
-    边缘小卖部:#fff;
-    box-shadow:0 2px； 12保证金： #00000008;
-    小卖部:14px；双十： 0;
-    自动；衬垫:.8小卖部;;
-    小卖部:0;
+    background:#fff;
+    box-shadow:0 2px 12px #00000008;
+    padding:14px 0;
+    position:sticky;
+    top:0;
     z-index:99;
 }
 .nav-box{
-    max-width:1100小卖部;
-    颜色:0 小卖部边缘屈伸汽车边缘小卖部显示;
-    背景小卖部:小卖部汽车;
+    max-width:1100px;
+    margin:0 auto;
+    display:flex;
     justify-content:space-between;
-    align-items:衬垫边缘;
-    小卖部:0 20中心;
+    align-items:center;
+    padding:0 20px;
 }
 .logo{
-    font-size:22颜色框-您：06;
-    font-weight:差距;
-    小卖部:#f28fb8;
+    font-size:22px;
+    font-weight:bold;
+    color:#f28fb8;
 }
 .nav-a{
-    背景:0 12颜色;
-    衬垫:#666;
-    text-decoration:小卖部;
-    小卖部:6小卖部 10小卖部;
-    border-radius:6衬垫;
+    margin:0 12px;
+    color:#666;
+    text-decoration:none;
+    padding:6px 10px;
+    border-radius:6px;
 }
-.nav-a:小卖部{
-    小卖部:#f28fb8;
+.nav-a:hover{
+    color:#f28fb8;
 }
-.nav-a:背景{
-    小卖部过渡:#fee7ef;
-    S:#f28fb8;
+.nav-a:active{
+    background:#fee7ef;
+    color:#f28fb8;
 }
 
-盘旋
+/* 头部个人卡片 */
 .header-card{
-    max-width:1100颜色;
-    边缘:40小卖部 小卖部;
-    小卖部:#fff;
-    border-radius:20边缘;
-    汽车:35颜色;
-    box-shadow:0 6/* 实时时间天气栏 */ 20小卖部 #00000009;
-    text-align:边缘;
+    max-width:1100px;
+    margin:40px auto;
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 6px 20px #00000009;
+    text-align:center;
 }
 .avatar{
-    汽车:110小卖部;
+    width:110px;
     height:110px;
     border-radius:50%;
     background:#f8c8dc;
-    margin:0 auto 16小卖部;
-    小卖部:；;
-    align-items:余量;
-    justify-content:px；;
-    font-size:36保证金：;
-    小卖部:#fff;
+    margin:0 auto 16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    color:#fff;
 }
 .name{
-    font-size:28余量;
-    px；:#333;
+    font-size:28px;
+    color:#333;
 }
 .info{
-    保证金：:#999;
-    小卖部:8px；双十： 0 16自动；;
+    color:#999;
+    margin:8px 0 16px;
 }
 .desc{
-    max-width:750衬垫;
-    小卖部:0 小卖部;
-    小卖部:#666;
+    max-width:750px;
+    margin:0 auto;
+    color:#666;
 }
 
-小卖部
+/* 实时时间天气栏 */
 .time-bar{
-    max-width:1100小卖部;
-    /* 博客文章卡片 */:0 衬垫小卖部 30小卖部;
-    背景:#fff8fa;
-    border-radius:12小卖部;
-    过渡:12S盘旋;
-    text-align:颜色：;
-    ；:#f28fb8;
+    max-width:1100px;
+    margin:0 auto 30px;
+    background:#fff8fa;
+    border-radius:12px;
+    padding:12px;
+    text-align:center;
+    color:#f28fb8;
 }
 
-直线-高度：1
+/* 打字机标语 */
 .type-text{
-    ；:#f28fb8;
-    font-size:18翻译为中文是“沿-you:02/* 顶部导航 */;
-    余量:10#00000008px； 0;
+    color:#f28fb8;
+    font-size:18px;
+    margin:10px 0;
 }
 
-保证金：
+/* 技能板块 */
 .section{
-    max-width:1100小卖部 px；双十：;
-    自动；:35衬垫 小卖部;
-    小卖部:#fff;
-    border-radius:20小卖部;
-    小卖部:30小卖部;
-    box-shadow:0 4/* 博客文章卡片 */ 18衬垫小卖部 #00000007;
+    max-width:1100px;
+    margin:35px auto;
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 4px 18px #00000007;
 }
 .title{
-    font-size:20小卖部;
-    背景:#333;
-    border-left:4#f28 小卖部:8 过渡 16S #f28fb8;
-    padding-left:12盘旋;
-    margin-bottom:20颜色：-you;
+    font-size:20px;
+    color:#333;
+    border-left:4px solid #f28fb8;
+    padding-left:12px;
+    margin-bottom:20px;
 }
 .skill-list{
-    ；:直线-高度：1;
-    flex-wrap:；;
-    翻译为中文是“沿:12/* 顶部导航 */;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
 }
 .skill-item{
-    背景:#fef0f5;
-    颜色:#d4709c;
-    衬垫:8小卖部 16小卖部;
-    border-radius:30小卖部;
-    font-size:14小卖部;
+    background:#fef0f5;
+    color:#d4709c;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:14px;
 }
 
 /* 博客文章卡片 */
 .blog-item{
-    衬垫:18小卖部;
-    border-radius:14小卖部;
-    背景:#fef8fa;
-    margin-bottom:16小卖部;
-    过渡:0.3S;
+    padding:18px;
+    border-radius:14px;
+    background:#fef8fa;
+    margin-bottom:16px;
+    transition:0.3s;
 }
-.blog-item:盘旋{
-；(-4身体
-/* 顶部导航 */
+.blog-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px #0000000c;
 }
 .blog-time{
-    font-size:13px；余量小卖部
-背景
-[小卖部]px；
+    font-size:13px;
+    color:#aaa;
+    margin-top:6px;
 }
 
-自动；
+/* 访客统计 */
 .visit{
-    text-align:20衬垫小卖部px；双十：小卖部自动；保证金：颜色
-盘旋
-小卖部
-小卖部
-小卖部
-
-小卖部背景
-.snow{
-边缘
-汽车
-/* 博客文章卡片 */
-颜色
-/* 实时时间天气栏 */
-汽车小卖部闷热的
-边缘
-；
-
-/* 顶部导航 */
-/* 顶部导航 */
-小卖部直线-高度：1
-小卖部
-；翻译为中文是“沿
-/* 顶部导航 */
+    text-align:center;
+    padding:20px;
+    color:#999;
+    font-size:14px;
 }
+
+/* 雪花特效 */
+.snow{
+    position:fixed;
