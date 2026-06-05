@@ -1,70 +1,69 @@
 // 1.打字机效果
-常数词语 = ["温柔写代码，认真生活✨","专注前端 · 热爱设计 · 持续进步","热爱代码，也热爱生活"];
-让wIndex牌清洁剂=0,tIndex=0,isDel=虚假的;
-常数类型=文档.getElementById("typeText");
-功能类型(){
-    让现在=词语[wIndex牌清洁剂];
-    如果(!isDel){
-        类型.内部文本=现在.子字符串(0,tIndex++);
-        如果(tIndex>现在.长度){isDel=真正的;setTimeout(类型,1200);返回;}
-    }其他的{
-        类型.内部文本=现在.子字符串(0,tIndex--);
-        如果(tIndex<=0){isDel=虚假的;wIndex牌清洁剂=(wIndex牌清洁剂+1)%词语.长度;}
+const words = ["温柔写代码，认真生活✨","专注前端 · 热爱设计 · 持续进步","热爱代码，也热爱生活"];
+let wIndex=0,tIndex=0,isDel=false;
+const typeDom=document.getElementById("typeText");
+function type(){
+    let now=words[wIndex];
+    if(!isDel){
+        typeDom.innerText=now.substring(0,tIndex++);
+        if(tIndex>now.length){isDel=true;setTimeout(type,1200);return;}
+    }else{
+        typeDom.innerText=now.substring(0,tIndex--);
+        if(tIndex<=0){isDel=false;wIndex=(wIndex+1)%words.length;}
     }
-    setTimeout(类型,isDel?40:80);
+    setTimeout(type,isDel?40:80);
 }
-类型();
+type();
 
 // 2.实时时间
-功能 timeUpd(){
-    让D=新的日期();
-    让英语字母表的第25个字母=D.年(),M=D.获取月份()+1,天=D.获取日期();
-    让 H=D.getHours(),我=D.会议记录(),S=D.获取秒数();
-    让周=["周日","周一","周二","周三","周四","周五","周六"][D.getDay()];
-    文档.getElementById("timeShow").内部文本=`${英语字母表的第25个字母}年${M}月${天}日${周} ${H}:${我}:${S}`;
+function timeUpd(){
+    let d=new Date();
+    let y=d.getFullYear(),m=d.getMonth()+1,day=d.getDate();
+    let h=d.getHours(),mi=d.getMinutes(),s=d.getSeconds();
+    let week=["周日","周一","周二","周三","周四","周五","周六"][d.getDay()];
+    document.getElementById("timeShow").innerText=`${y}年${m}月${day}日 ${week} ${h}:${mi}:${s}`;
 }
-setInterval（）(timeUpd,1000);
+setInterval(timeUpd,1000);
 timeUpd();
 
 // 3.随机访客数
-让V=数学.地板(1200+数学.随机的()*300);
-文档.getElementById("visitNum").内部文本=V;
+let v=Math.floor(1200+Math.random()*300);
+document.getElementById("visitNum").innerText=v;
 
 // 4.温柔雪花特效
-常数帆布=文档.getElementById("snowCanvas");
-常数上下文=帆布.获取上下文("2d");
-让 W=帆布.宽度=窗.内部宽度;
-让H=帆布.高度=窗.内高;
-让snowArr=[];
-班级雪{
-    制造商(){
-        这.X=数学.随机的()*W;
-        这.英语字母表的第25个字母=数学.随机的()*H-H;
-        这.江=数学.随机的()*2+1;
-        这.速度=数学.随机的()+0.5;
-        这.风=数学.随机的()*0.4-0.2;
+const canvas=document.getElementById("snowCanvas");
+const ctx=canvas.getContext("2d");
+let w=canvas.width=window.innerWidth;
+let h=canvas.height=window.innerHeight;
+let snowArr=[];
+class Snow{
+    constructor(){
+        this.x=Math.random()*w;
+        this.y=Math.random()*h-h;
+        this.r=Math.random()*2+1;
+        this.speed=Math.random()+0.5;
+        this.wind=Math.random()*0.4-0.2;
     }
-    移动(){
-        这.英语字母表的第25个字母+=这.速度;
-        这.X+=这.风;
-        如果(这.英语字母表的第25个字母>H){
-            这.英语字母表的第25个字母=-10;
-            这.X=数学.随机的()*W;
+    move(){
+        this.y+=this.speed;
+        this.x+=this.wind;
+        if(this.y>h){
+            this.y=-10;
+            this.x=Math.random()*w;
         }
     }
-    画(){
-        上下文.开始路径();
-        上下文.弧(这.X,这.英语字母表的第25个字母,这.江,0,数学.圆周率*2);
-        上下文.填充样式="#ffd8e8";
-        上下文.充满();
+    draw(){
+        ctx.beginPath();
+        ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+        ctx.fillStyle="#ffd8e8";
+        ctx.fill();
     }
 }
-为(让我=0;我<60;我++) snowArr.推(新的雪());
-功能跑(){
-    上下文.清除矩形区域(0,0,W,H);
-    snowArr.对于每一个(S=>{S.移动();S.画();})
-    请求动画帧(跑);
+for(let i=0;i<<60;i++) snowArr.push(new Snow());
+function run(){
+    ctx.clearRect(0,0,w,h);
+    snowArr.forEach(s=>{s.move();s.draw();})
+    requestAnimationFrame(run);
 }
-跑();
-窗.窗口大小调整时触发=()=>{W=帆布.宽度=窗.内部宽度;H=帆布.高度=窗.内高;}
-
+run();
+window.onresize=()=>{w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;}
