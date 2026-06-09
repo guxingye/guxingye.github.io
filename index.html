@@ -54,22 +54,22 @@
 <div class="section" id="blog">
     <h3 class="title">博客随笔 & 技术记录</h3>
 
-    <div class="blog-item">
+    <div class="blog-item" data-blog-id="1">
         <div class="blog-title">✨ 从零搭建高颜值个人博客全过程</div>
         <div class="blog-time">发布时间：2026-06-04</div>
     </div>
 
-    <div class="blog-item">
+    <div class="blog-item" data-blog-id="2">
         <div class="blog-title">Vue3 新手快速入门学习笔记</div>
         <div class="blog-time">发布时间：2026-06-01</div>
     </div>
 
-    <div class="blog-item">
+    <div class="blog-item" data-blog-id="3">
         <div class="blog-title">前端常见跨域问题完美解决汇总</div>
         <div class="blog-time">发布时间：2026-05-28</div>
     </div>
 
-    <div class="blog-item">
+    <div class="blog-item" data-blog-id="4">
         <div class="blog-title">移动端自适应布局技巧总结</div>
         <div class="blog-time">发布时间：2026-05-20</div>
     </div>
@@ -95,6 +95,16 @@
 </footer>
 
 <canvas class="snow" id="snowCanvas"></canvas>
+
+<!-- 文章详情模态框 -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-time" id="modalTime"></div>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+</div>
 
 <script src="main.js"></script>
 </body>
